@@ -1,20 +1,20 @@
 export default {
   type: 'document',
-  name: 'post',
-  title: 'Post',
+  name: 'item',
+  title: 'Item',
   fields: [
     {
       type: 'string',
       name: 'title',
       title: 'Title',
-      description: 'The title of the post.',
+      description: 'The title of the item.',
       validation: Rule => Rule.required(),
     },
     {
       type: 'string',
       name: 'subtitle',
       title: 'Subtitle',
-      description: 'The text shown just below the post title.',
+      description: 'The text shown just below the item title.',
       validation: null,
     },
     {
@@ -34,20 +34,20 @@ export default {
       type: 'image',
       name: 'content_img_path',
       title: 'Alternative Featured Image',
-      description: 'The image shown in the single post.',
+      description: 'The image shown in the single item.',
       validation: null,
     },
     {
       type: 'string',
       name: 'excerpt',
       title: 'Excerpt',
-      description: 'The excerpt of the post displayed in the blog feed.',
+      description: 'The excerpt of the item displayed in the blog feed.',
       validation: null,
     },
     {
       type: 'page_menus',
       name: 'menus',
-      title: 'Post Menus',
+      title: 'Item Menus',
       description: 'Which menus should this page show up in',
       validation: null,
     },
@@ -58,15 +58,15 @@ export default {
       hidden: false,
       validation: Rule => Rule.required(),
       options: {
-        list: ['post'],
+        list: ['item'],
       },
     },
     {
       type: 'string',
       name: 'stackbit_url_path',
-      title: 'Post URL Path',
+      title: 'Item URL Path',
       description:
-        'The URL path of this page relative to site root. For example, the site root page would be "/", and post page would be "posts/new-post/"',
+        'The URL path of this page relative to site root. For example, the site root page would be "/", and item page would be "items/new-item/"',
       validation: Rule => Rule.required(),
     },
     {
