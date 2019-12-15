@@ -1,8 +1,8 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Import user defined schema types
 import config from './config.js';
@@ -20,6 +20,8 @@ import site_menus from './site_menus.js';
 import site_menu_item from './site_menu_item.js';
 import page_menus from './page_menus.js';
 import page_menu_item from './page_menu_item.js';
+import item from './item.js';
+import posts from './posts.js';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,6 +38,8 @@ export default createSchema({
     contact,
     page,
     post,
+    posts,
+    item,
     subscribe,
     section,
     action,
@@ -43,6 +47,6 @@ export default createSchema({
     site_menus,
     site_menu_item,
     page_menus,
-    page_menu_item
-    ])
-})
+    page_menu_item,
+  ]),
+});

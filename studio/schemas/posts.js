@@ -1,7 +1,7 @@
 export default {
   type: 'document',
-  name: 'home',
-  title: 'Home',
+  name: 'posts',
+  title: 'Posts',
   fields: [
     {
       type: 'string',
@@ -15,7 +15,7 @@ export default {
       type: 'array',
       name: 'sections',
       title: 'Sections',
-      description: 'Home page sections',
+      description: 'Posts page sections',
       validation: null,
       of: [
         {
@@ -26,7 +26,7 @@ export default {
     {
       type: 'page_menus',
       name: 'menus',
-      title: 'Home Menus',
+      title: 'Posts Menus',
       description: 'Which menus should this page show up in',
       validation: null,
     },
@@ -37,13 +37,13 @@ export default {
       hidden: false,
       validation: Rule => Rule.required(),
       options: {
-        list: ['home'],
+        list: ['posts'],
       },
     },
     {
       type: 'string',
       name: 'stackbit_url_path',
-      title: 'Home URL Path',
+      title: 'Posts URL Path',
       description:
         'The URL path of this page relative to site root. For example, the site root page would be "/", and post page would be "posts/new-post/"',
       validation: Rule => Rule.required(),
