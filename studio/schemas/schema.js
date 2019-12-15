@@ -21,7 +21,7 @@ import site_menu_item from './site_menu_item.js';
 import page_menus from './page_menus.js';
 import page_menu_item from './page_menu_item.js';
 import item from './item.js';
-import posts from './posts.js';
+import blog from './blog.js';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -38,7 +38,7 @@ export default createSchema({
     contact,
     page,
     post,
-    posts,
+    blog,
     item,
     subscribe,
     section,
