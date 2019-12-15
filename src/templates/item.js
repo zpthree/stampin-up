@@ -5,7 +5,7 @@ import moment from 'moment-strftime';
 import { Layout } from '../components/index';
 import { htmlToReact, safePrefix } from '../utils';
 
-export default class Post extends React.Component {
+export default class Item extends React.Component {
   render() {
     return (
       <Layout {...this.props}>
