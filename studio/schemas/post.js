@@ -45,13 +45,6 @@ export default {
       validation: null,
     },
     {
-      type: 'page_menus',
-      name: 'menus',
-      title: 'Post Menus',
-      description: 'Which menus should this page show up in',
-      validation: null,
-    },
-    {
       type: 'string',
       name: 'template',
       title: 'Template',
