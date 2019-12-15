@@ -15,6 +15,21 @@ export default class Items extends React.Component {
     return (
       <Layout {...this.props}>
         <div className="post-feed">
+          {_.map(
+            _.get(this.props, 'pageContext.frontmatter.sections'),
+            (section, section_idx) => {
+              const GetSectionComponent =
+                components[_.get(section, 'component')];
+              return (
+                <GetSectionComponent
+                  key={section_idx}
+                  {...this.props}
+                  section={section}
+                  site={this.props.pageContext.site}
+                />
+              );
+            }
+          )}
           {_.map(display_items, (item, item_idx) => (
             <article key={item_idx} className="post post-card">
               <div className="post-card-inside">

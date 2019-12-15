@@ -1,7 +1,7 @@
 export default {
   type: 'document',
-  name: 'posts',
-  title: 'Posts',
+  name: 'items',
+  title: 'Items',
   fields: [
     {
       type: 'string',
@@ -15,7 +15,7 @@ export default {
       type: 'array',
       name: 'sections',
       title: 'Sections',
-      description: 'Posts page sections',
+      description: 'Items page sections',
       validation: null,
       of: [
         {
@@ -26,7 +26,7 @@ export default {
     {
       type: 'page_menus',
       name: 'menus',
-      title: 'Posts Menus',
+      title: 'Items Menus',
       description: 'Which menus should this page show up in',
       validation: null,
     },
@@ -37,15 +37,15 @@ export default {
       hidden: false,
       validation: Rule => Rule.required(),
       options: {
-        list: ['posts'],
+        list: ['items'],
       },
     },
     {
       type: 'string',
       name: 'stackbit_url_path',
-      title: 'Posts URL Path',
+      title: 'Items URL Path',
       description:
-        'The URL path of this page relative to site root. For example, the site root page would be "/", and post page would be "posts/new-post/"',
+        'The URL path of this page relative to site root. For example, the site root page would be "/", and post page would be "items/new-post/"',
       validation: Rule => Rule.required(),
     },
     {
